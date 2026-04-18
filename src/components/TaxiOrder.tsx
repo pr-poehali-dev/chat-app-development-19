@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Icon from "@/components/ui/icon";
+import TaxiMap from "@/components/TaxiMap";
 
 export default function TaxiOrder() {
   const [from, setFrom] = useState("");
@@ -21,24 +22,8 @@ export default function TaxiOrder() {
       </div>
 
       <div className="flex-1 px-4 py-5 flex flex-col gap-5">
-        {/* Map placeholder */}
-        <div className="relative rounded-2xl overflow-hidden h-44 bg-gradient-to-br from-slate-800 to-slate-900 border border-border flex items-center justify-center">
-          <div className="absolute inset-0 opacity-20"
-            style={{
-              backgroundImage: "radial-gradient(circle at 2px 2px, rgba(168,85,247,0.4) 1px, transparent 0)",
-              backgroundSize: "28px 28px"
-            }}
-          />
-          <div className="text-center text-muted-foreground">
-            <div className="text-3xl mb-2">🗺️</div>
-            <p className="text-xs">Карта маршрута</p>
-          </div>
-          <div className="absolute top-3 right-3">
-            <div className="w-7 h-7 rounded-lg bg-background/80 backdrop-blur flex items-center justify-center text-muted-foreground hover:text-foreground cursor-pointer transition-colors">
-              <Icon name="Maximize2" size={14} />
-            </div>
-          </div>
-        </div>
+        {/* Map */}
+        <TaxiMap className="h-56" />
 
         {/* Route inputs */}
         <div className="flex flex-col gap-2">
