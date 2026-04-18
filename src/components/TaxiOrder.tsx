@@ -1,7 +1,11 @@
 import { useState } from "react";
 import Icon from "@/components/ui/icon";
 
-export default function TaxiOrder() {
+interface Props {
+  onGoToDriverChat: () => void;
+}
+
+export default function TaxiOrder({ onGoToDriverChat }: Props) {
   const [from, setFrom] = useState("");
   const [to, setTo] = useState("");
 
@@ -60,6 +64,7 @@ export default function TaxiOrder() {
 
         {/* Order button */}
         <button
+          onClick={onGoToDriverChat}
           className="w-full py-6 rounded-2xl bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold text-lg shadow-xl hover:opacity-90 transition-all active:scale-95"
           style={{ fontFamily: "Montserrat, sans-serif" }}
         >

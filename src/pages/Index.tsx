@@ -135,7 +135,7 @@ export default function Index() {
         {/* Content */}
         <div className="flex-1 overflow-y-auto py-1">
           {activeTab === 1 ? (
-            <TaxiOrder />
+            <TaxiOrder onGoToDriverChat={() => setActiveTab(0)} />
           ) : (
             <ChatList
               chats={filteredChats}
