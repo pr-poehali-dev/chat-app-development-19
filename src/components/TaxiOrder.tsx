@@ -7,9 +7,7 @@ export default function TaxiOrder() {
   const [tariff, setTariff] = useState("econom");
 
   const tariffs = [
-    { id: "econom", label: "Эконом", price: "от 199 ₽", icon: "Car", color: "from-green-500 to-emerald-600" },
-    { id: "comfort", label: "Комфорт", price: "от 349 ₽", icon: "Car", color: "from-blue-500 to-cyan-600" },
-    { id: "business", label: "Бизнес", price: "от 599 ₽", icon: "Car", color: "from-purple-500 to-violet-600" },
+    { id: "econom", label: "Поиск водителя", price: "от 199 ₽", icon: "Car", color: "from-green-500 to-emerald-600" },
   ];
 
   return (
