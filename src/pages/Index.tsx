@@ -2,12 +2,14 @@ import { useState, useMemo } from "react";
 import { chats } from "@/data/chats";
 import ChatList from "@/components/ChatList";
 import ChatWindow from "@/components/ChatWindow";
+import TaxiOrder from "@/components/TaxiOrder";
 import Icon from "@/components/ui/icon";
 
 export default function Index() {
   const [activeId, setActiveId] = useState<number | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
   const [showChat, setShowChat] = useState(false);
+  const [activeTab, setActiveTab] = useState(0);
 
   const activeChat = chats.find(c => c.id === activeId) ?? null;
 
@@ -116,8 +118,9 @@ export default function Index() {
               {["Чат с водителями", "Заказ такси", "Объявления"].map((tab, i) => (
                 <button
                   key={tab}
+                  onClick={() => setActiveTab(i)}
                   className={`flex-1 text-xs py-1.5 rounded-lg transition-all ${
-                    i === 0
+                    activeTab === i
                       ? "bg-gradient-to-r from-purple-600 to-violet-600 text-white font-semibold shadow"
                       : "text-muted-foreground hover:text-foreground"
                   }`}
@@ -129,14 +132,18 @@ export default function Index() {
           </div>
         )}
 
-        {/* Chat list */}
+        {/* Content */}
         <div className="flex-1 overflow-y-auto py-1">
-          <ChatList
-            chats={filteredChats}
-            activeId={activeId}
-            onSelect={handleSelect}
-            searchQuery={searchQuery}
-          />
+          {activeTab === 1 ? (
+            <TaxiOrder />
+          ) : (
+            <ChatList
+              chats={filteredChats}
+              activeId={activeId}
+              onSelect={handleSelect}
+              searchQuery={searchQuery}
+            />
+          )}
         </div>
 
         {/* Bottom nav */}
