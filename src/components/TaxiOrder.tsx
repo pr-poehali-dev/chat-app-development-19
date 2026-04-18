@@ -96,10 +96,10 @@ export default function TaxiOrder() {
 
         {/* Order button */}
         <button
-          className="w-full py-4 rounded-2xl bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold text-sm shadow-lg hover:opacity-90 transition-all active:scale-98"
+          className="w-full py-6 rounded-2xl bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold text-lg shadow-xl hover:opacity-90 transition-all active:scale-95"
           style={{ fontFamily: "Montserrat, sans-serif" }}
         >
-          🚕 Заказать такси
+          🚕 Увезет • Привезет
         </button>
 
         {/* Info */}
