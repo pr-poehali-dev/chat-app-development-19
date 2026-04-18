@@ -77,23 +77,6 @@ export default function TaxiOrder() {
           </div>
         </div>
 
-        {/* Options */}
-        <div className="flex gap-2">
-          {[
-            { icon: "Clock", label: "Сейчас" },
-            { icon: "Users", label: "1 пасс." },
-            { icon: "Briefcase", label: "Багаж" },
-          ].map(opt => (
-            <button
-              key={opt.label}
-              className="flex-1 flex items-center justify-center gap-1.5 bg-muted rounded-xl py-2.5 text-xs text-muted-foreground hover:text-foreground transition-colors"
-            >
-              <Icon name={opt.icon} size={13} />
-              {opt.label}
-            </button>
-          ))}
-        </div>
-
         {/* Order button */}
         <button
           className="w-full py-6 rounded-2xl bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold text-lg shadow-xl hover:opacity-90 transition-all active:scale-95"
