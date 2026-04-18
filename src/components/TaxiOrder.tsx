@@ -102,20 +102,7 @@ export default function TaxiOrder() {
           🚕 Увезет • Привезет
         </button>
 
-        {/* Info */}
-        <div className="flex gap-3">
-          {[
-            { icon: "Clock", label: "~5 мин", sub: "до подачи" },
-            { icon: "Shield", label: "Безопасно", sub: "проверен. водители" },
-            { icon: "Star", label: "4.9 ★", sub: "рейтинг" },
-          ].map(item => (
-            <div key={item.label} className="flex-1 bg-muted rounded-xl p-3 flex flex-col items-center gap-1">
-              <Icon name={item.icon} size={16} className="text-muted-foreground" />
-              <span className="text-xs font-semibold text-foreground">{item.label}</span>
-              <span className="text-[10px] text-muted-foreground text-center">{item.sub}</span>
-            </div>
-          ))}
-        </div>
+
       </div>
     </div>
   );
