@@ -14,7 +14,7 @@ export default function TaxiOrder() {
             <Icon name="Car" size={18} className="text-white" />
           </div>
           <div>
-            <p className="font-semibold text-sm" style={{ fontFamily: "Montserrat, sans-serif" }}>Заказ такси</p>
+            <p className="font-semibold text-sm" style={{ fontFamily: "Montserrat, sans-serif" }}>Найти кто отвезет-привезет</p>
             <p className="text-xs text-muted-foreground">Быстро и надёжно</p>
           </div>
         </div>

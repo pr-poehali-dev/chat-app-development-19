@@ -115,7 +115,7 @@ export default function Index() {
         {!searchQuery && (
           <div className="px-4 mb-2 flex-shrink-0">
             <div className="flex gap-1 bg-muted rounded-xl p-1">
-              {["Чат с водителями", "Заказ такси", "Объявления"].map((tab, i) => (
+              {["Чат с водителями", "Найти кто отвезет-привезет", "Объявления"].map((tab, i) => (
                 <button
                   key={tab}
                   onClick={() => setActiveTab(i)}
