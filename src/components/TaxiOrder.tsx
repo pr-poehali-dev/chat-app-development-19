@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Icon from "@/components/ui/icon";
-import TaxiMap from "@/components/TaxiMap";
 
 export default function TaxiOrder() {
   const [from, setFrom] = useState("");
@@ -22,9 +21,6 @@ export default function TaxiOrder() {
       </div>
 
       <div className="flex-1 px-4 py-5 flex flex-col gap-5">
-        {/* Map */}
-        <TaxiMap className="h-56" />
-
         {/* Route inputs */}
         <div className="flex flex-col gap-2">
           <div className="relative flex items-center bg-muted rounded-xl px-4 py-3 gap-3">
