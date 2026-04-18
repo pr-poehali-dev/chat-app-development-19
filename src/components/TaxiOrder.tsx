@@ -4,11 +4,6 @@ import Icon from "@/components/ui/icon";
 export default function TaxiOrder() {
   const [from, setFrom] = useState("");
   const [to, setTo] = useState("");
-  const [tariff, setTariff] = useState("econom");
-
-  const tariffs = [
-    { id: "econom", label: "Поиск водителя", price: "от 199 ₽", icon: "Car", color: "from-green-500 to-emerald-600" },
-  ];
 
   return (
     <div className="flex-1 flex flex-col h-full overflow-y-auto">
@@ -79,32 +74,6 @@ export default function TaxiOrder() {
                 <Icon name="X" size={14} />
               </button>
             )}
-          </div>
-        </div>
-
-        {/* Tariffs */}
-        <div>
-          <p className="text-xs font-semibold text-muted-foreground mb-2 px-1 uppercase tracking-wide">Тариф</p>
-          <div className="flex gap-2">
-            {tariffs.map(t => (
-              <button
-                key={t.id}
-                onClick={() => setTariff(t.id)}
-                className={`flex-1 rounded-xl py-3 px-2 flex flex-col items-center gap-1.5 transition-all border ${
-                  tariff === t.id
-                    ? "border-purple-500 bg-purple-500/10"
-                    : "border-border bg-muted hover:border-border/80"
-                }`}
-              >
-                <div className={`w-8 h-8 rounded-lg bg-gradient-to-br ${t.color} flex items-center justify-center`}>
-                  <Icon name={t.icon} size={15} className="text-white" />
-                </div>
-                <span className={`text-xs font-semibold ${tariff === t.id ? "text-purple-400" : "text-foreground"}`}>
-                  {t.label}
-                </span>
-                <span className="text-[10px] text-muted-foreground">{t.price}</span>
-              </button>
-            ))}
           </div>
         </div>
 
